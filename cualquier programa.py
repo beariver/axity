@@ -16,7 +16,7 @@ def get_token():
     auth = (username, password) 
     headers = {'Content-Type':'application/json'}
     response = requests.post(url, auth=auth, headers=headers, verify=False)
-    json_data = json.loads(response.text)
+    json_data = json.loads(response.text) #json test
     token = json_data['token-id']
     print('We received token: %s' % token)
     return token
